@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>首页</title>
+		<link href="css/nav.css" rel="stylesheet" type="text/css">
+		<link href="css/music.css" rel="stylesheet" type="text/css">
+		<style type="text/css">
+			/* 背景设置 */
+			#indexBackground{
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: calc(100%);
+				height: calc(100%);
+				background-image: url(//r.photo.store.qq.com/psc?/V51vpwSS41b4I342IPRB2vXzjp4ObFnc/45NBuzDIW489QBoVep5mcZ60RuAJoeLcSpnIUZ.4uvpuK7zA8hdsp5FJP*hGWkgugy9*5D0BmqB1QEBND7MVWWjWJ7hLhvqr*eIra7DMvZU!/r);
+				background-size: cover;
+				background-position: center;
+				z-index: -99999;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="indexBackground"></div>
+		<div id="nav">
+			<div id="nav_top">
+				<ul id="nav_left">
+					<li><a href="index.html">首页</a></li>
+					<li><a href="index.html">首页</a></li>
+					<li><a href="index.html">首页</a></li>
+					<li><a href="#">关于我们</a>
+						<ul id="listGuanYu">
+							<li><a href="#">关于我们</a></li>
+							<li><a href="#">关于我们</a></li>
+							<li><a href="#">关于我们</a></li>
+							<li><a href="#">关于我们</a></li>
+							<li><a href="#">关于我们</a></li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+			<div id="nav_right">
+				<ul>
+					<li><a href="login.html">登录</a></li>
+					<li><a href="register.html">注册</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="musicBox">
+			<div id="music" onclick="bf();">
+				<img src="img/music.png" id="bgm_img"/>
+				<audio src="//music.163.com/song/media/outer/url?id=468513218.mp3" loop="loop" autoplay="autoplay" id="bgm"></audio>
+			</div>
+		</div>
+	</body>
+	<script src="js/music_on_off.js"></script>
+</html>

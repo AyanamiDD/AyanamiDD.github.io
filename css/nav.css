@@ -1,0 +1,82 @@
+@font-face {
+	font-family:"ak";
+	src: url(../fonts/AnnaHeart.ttf);
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+	color: white;
+}
+ul,li{
+	list-style: none;
+}
+body{
+	min-width:1500px;
+	font-family: ak;
+}
+#nav{
+	width: calc(100%);
+	height: 50px;
+	border-bottom: 5px solid rgba(181,181,181,0.8);
+	background-color: rgba(0,0,0,0.6);
+	position: fixed;
+	top: 0;
+	z-index: 99999;
+}
+#nav_top{
+	width: 600px;
+	height: 50px;
+	margin-left: 100px;
+	float: left;
+}
+#nav_top>ul>li{
+	width: 100px;
+	height: 50px;
+	float: left;
+	text-align: center;
+	line-height: 50px;
+	color: white;
+}
+#nav_top>ul>li:link>a,#nav_right ul li:link>a{color:black;}
+#nav_top>ul>li:visited>a,#nav_right ul li:visited>a{color:black;}
+#nav_top>ul>li:hover,#nav_right ul li:hover{
+	background-color: rgba(105,105,105,0.8);
+}
+#nav_top>ul>li:active>a,#nav_right ul li:active>a{color:black;}
+#nav_right{
+	float: right;
+	width: 100px;
+	height: 50px;
+	margin-right: 100px;
+}
+#nav_right>ul>li{
+	width: 50px;
+	height: 50px;
+	float: left;
+	text-align: center;
+	line-height: 50px;
+	color: white;
+}
+#listGuanYu{
+	width: 100px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	display: none;
+}
+#listGuanYu li{
+	background-color: rgba(0,0,0,0.6);
+	transition: background-color 0.3s;/* 渐变 */
+}
+#nav_top>ul>li:hover #listGuanYu{
+	display: block;
+}
+#listGuanYu li:link{color:black;}
+#listGuanYu li:visited{color:black;}
+#listGuanYu li:hover{
+	background-color: rgba(105,105,105,0.8);
+}
+#listGuanYu li:active{color:black;}

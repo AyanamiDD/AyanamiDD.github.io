@@ -1,0 +1,83 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	/* 旧的背景设置
+	background: url(../img/LAS_69630245.png) no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	margin: 0 auto;
+	 */
+	overflow:hidden; /* overflow 属性规定当内容溢出元素框时发生的事情。hidden	内容会被修剪，并且其余内容是不可见的。 */
+}
+#loginBackground{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: calc(100%);
+	height: calc(100%);
+	background-image: url(//r.photo.store.qq.com/psc?/V51vpwSS41b4I342IPRB2vXzjp4ObFnc/45NBuzDIW489QBoVep5mcZ60RuAJoeLcSpnIUZ.4uvpuK7zA8hdsp5FJP*hGWkgugy9*5D0BmqB1QEBND7MVWWjWJ7hLhvqr*eIra7DMvZU!/r);
+	background-size: cover;
+	background-position: center;
+	z-index: -99999;
+}
+#login_b{
+	width: 600px;
+	height: 400px;
+	background-color: rgba(0,0,0,0.7);
+	border-radius: 25px;
+	margin: 8% auto;
+	position:relative;
+	
+}
+#login_b>h2{
+	text-align: center;
+	padding-top: 20px;
+	color: #FBFBFB;
+}
+#login_b #inputBox{
+	width: 210.8px;
+	height: 100px;
+	margin: 50px auto;
+}
+#login_b #inputBox #inputText input{
+	padding: 10px 50px 10px 0;
+	border: 0;
+	background-color: rgba(0,0,0,0);
+	margin-bottom: 20px;
+	border-bottom: 1px solid white;
+	color: white;
+	outline: none;/* 取消文本框选择时出现的边框 */
+}
+#login_b #inputBox #inputPass input{
+	padding: 10px 50px 10px 0;
+	border: 0;
+	background-color: rgba(0,0,0,0);
+	margin-bottom: 20px;
+	border-bottom: 1px solid white;
+	color: white;
+	outline: none;
+}
+#inputButton{
+	width: 90px;
+	height: 30px;
+	border: 0;
+	margin: 0 auto;
+	margin-left: 6px;
+	margin-top: 20px;
+	border-radius: 10px;
+	background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+}
+#inputButton:hover{
+	background-image: linear-gradient(to top, #ebbba7 0%, #cfc7f8 100%);
+}
+#inputButton:active{
+	background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+}
+#login_b #inputBox #inputText input:hover{
+	border-bottom-color: aqua;
+}
+#login_b #inputBox #inputPass input:hover{
+	border-bottom-color: aqua;
+}

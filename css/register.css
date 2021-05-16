@@ -1,0 +1,82 @@
+#registerBackground{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: calc(100%);
+	height: calc(100%);
+	background-image: url(//r.photo.store.qq.com/psc?/V51vpwSS41b4I342IPRB2vXzjp4ObFnc/45NBuzDIW489QBoVep5mcZ60RuAJoeLcSpnIUZ.4uvpuK7zA8hdsp5FJP*hGWkgugy9*5D0BmqB1QEBND7MVWWjWJ7hLhvqr*eIra7DMvZU!/r);
+	background-size: cover;
+	background-position: center;
+	z-index: -99999;
+}
+#registerBox{
+	width: 600px;
+	height: 900px;
+	background-color: rgba(0,0,0,0.7);
+	margin: 6% auto;
+	border-radius: 10px;
+	
+}
+#registerBox>h2{
+	color: white;
+	text-align: center;
+	padding-top: 20px;
+}
+#registerTextBox>div{
+	width: 220px;
+	height: 400px;
+	margin: 5% auto;
+}
+#registerTextBox div p{
+	font-size: 8px;
+	color: white;
+}
+#registerTextBox>div>input{
+	width: 220px;
+	padding: 5px 0 5px 0;
+	margin-bottom: 30px;
+	border: 0;
+	border-bottom: 1px solid white;
+	background-color: rgba(0,0,0,0);
+	color: white;
+	outline: none;
+} 
+#phoneText{
+	width: 150px;
+	padding: 5px 0 5px 0;
+	margin-bottom: 30px;
+	border: 0;
+	border-bottom: 1px solid white;
+	background-color: rgba(0,0,0,0);
+	color: white;
+	outline: none;
+}
+#phoneButton{
+	width: 65px;
+	height: 25px;
+	border: 0;
+	border-radius: 5px;
+	background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+}
+#phoneButton:hover,#registerOver input:hover{
+	background-image: linear-gradient(to top, #ebbba7 0%, #cfc7f8 100%);
+}
+#phoneButton:active,#registerOver input:active{
+	background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+}
+#registerTextBox div>input:hover{
+	border-bottom-color: aqua;
+}
+#registerOver{
+	width: 180px;
+	height: 50px;
+	margin: 0 auto;
+}
+#registerOver input{
+	width: 180px;
+	height: 30px;
+	margin: 0 auto;
+	border: 0;
+	border-radius: 5px;
+	background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+}

@@ -1,0 +1,147 @@
+@charset "UTF-8";
+ *{
+     margin: 0;
+     padding: 0;
+ }
+ ul,li{
+	list-style：none；
+	padding:0;
+	margin:0;
+}
+ body{
+    font-size: 14px;
+    font-family: sans-serif;
+ }
+ .nav{
+	width: 605px;
+	height: 41px;
+	margin: 0 auto;
+ }
+ #navigation,#navigation li ul{
+    list-style-type: none;
+ }
+ #navigation li{
+    float: left;
+    text-align: center;
+    position: relative;
+ }
+ #navigation li a:link,#navigation li a:visited{
+	display: block;
+	text-decoration: none;
+	color: #000;
+    width: 120px;
+    height: 40px;
+	line-height: 40px;
+	border: 1px solid #fff;
+	background: #c5dbf2;
+    border-width: 1px 1px 0 0; 
+}
+ #navigation li a:hover{
+    color: #fff;
+    background: #2687eb;
+ }
+ #navigation li ul li{
+    float: none;    
+ }
+ #navigation li ul{
+	
+    display: none;
+	position: absolute;       /*二级ul使用绝对定位，宽度大于一级菜单时，才不会撑大一级*/
+ }
+#navigation li ul li a:link,#navigation li ul li a:visited{
+	display: block;
+    width: 120px;
+}
+
+$min-width: 120px;
+$maincolor: #6BBE92;  
+$secondarycolor: #3E8760;
+
+@mixin transform($value){
+  -webkit-transform: ($value);
+     -moz-transform: ($value);
+      -ms-transform: ($value);
+          transform: ($value);
+}
+@mixin transition($value){
+  -webkit-transition: ($value);
+     -moz-transition: ($value);
+      -ms-transition: ($value);
+          transition: ($value);
+}
+
+*{
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Open Sans', sans-serif;
+  background: #374954;
+  color: white;
+  text-align: center;
+}
+
+#main{
+  position: relative;
+  list-style: none;
+  background: $maincolor;
+  font-weight: 400;
+  font-size: 0;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 0;
+  margin: 50px auto;
+  li{
+    font-size: 0.8rem;
+    display: inline-block;
+    position: relative;
+    padding: 15px 20px;
+    cursor: pointer;
+    z-index: 5;
+    min-width: $min-width;
+  }  
+}
+li{
+  margin: 0;
+}
+.drop{
+    overflow: hidden;
+    list-style: none;
+    position: absolute;
+    padding: 0;
+    width: 100%;
+    left: 0;
+    top: 48px;
+    div{
+      @include transform(translate(0,-100%));
+      @include transition(all 0.5s 0.1s);
+      position: relative;
+    }
+    li{
+      display:block;
+      padding: 0;
+      width: 100%;
+      background: $secondarycolor !important;
+    }
+  }
+#marker{
+  height: 6px;
+  background: $secondarycolor !important;
+  position: absolute;
+  bottom: 0;
+  width: $min-width;
+  z-index: 2;
+  @include transition(all 0.35s);
+}
+
+@for $i from 1 through 4{
+  #main li:nth-child(#{$i}){
+    &:hover ul div{
+     @include transform(translate(0,0)); 
+    }
+    &:hover ~ #marker{
+      @include transform(translate(#{(-1+$i)*$min-width},0));
+    }
+  }    
+}
+
+
